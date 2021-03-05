@@ -2,6 +2,7 @@ from pathlib import Path
 import gzip
 from mimetypes import guess_type
 from functools import partial
+from torch.utils.data import Dataset
 
 BASE_DICT = {"A": (1, 0, 0, 0),
              "C": (0, 1, 0, 0),
@@ -99,3 +100,23 @@ def seq_to_feature(seq, min_seq_length):
         seq_feature.extend([ZERO_LIST] * (min_seq_length - read_length))
 
     return seq_feature
+  
+  
+class SeqFeature(Dataset):
+    def __init__(self, data, target, transform=None):
+        self.data = data
+        self.target = target
+        self.transform = transform
+
+    def __getitem__(self, index):
+        x = self.data[index]
+        y = self.target[index]
+
+        if self.transform:
+            x = self.transform(x)
+
+        return x, y
+
+    def __len__(self):
+        return len(self.data)  
+  
