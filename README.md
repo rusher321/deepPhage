@@ -24,3 +24,6 @@ This project is licensed under the MIT License. See  LICENSE for more details
 1. [Massive expansion of human gut bacteriophage diversity](https://www.sciencedirect.com/science/article/pii/S0092867421000726)
 2. [Mining, analyzing, and integrating viral signals from metagenomic data](https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-019-0657-y)
 3. [VIBRANT: Automated recovery, annotation and curation of microbial viruses, and evaluation of virome function from genomic sequences](https://www.biorxiv.org/content/10.1101/855387v1)
+
+## Database
+1. **GPD**: /hwfssz1/pub/database/ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/gut_phage_database
